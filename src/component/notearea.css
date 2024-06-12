@@ -1,0 +1,68 @@
+.notearea{
+    width: 70%;
+    background-color:#F7ECDC;
+    height:630px;
+    margin-top:0%;
+}
+.header{
+    background-color:#E8E8E8;
+    margin-top:0%;
+    height:80px;
+    width:100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.header_initial{
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+   
+}
+
+.header_name{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.note_display{
+   
+    height: 350px;
+    width: 100;
+    box-sizing: border-box;
+}
+
+
+.note_input{
+height:200px;
+width: 100%;
+border: 20px solid #E8E8E8;
+background-color: white;
+box-sizing: border-box;
+
+}
+
+.text_area{
+    height: 150px;
+    width:100%;
+    border: 1px solid white;
+    box-sizing: border-box;
+    overflow-y:scroll; 
+}
+
+.text_area::placeholder {
+    text-align: left; /* Aligns the placeholder text to the left */
+    vertical-align: top; /* Aligns the placeholder text to the top */
+    color:red; /* Changes the placeholder text color for better visibility */
+}
