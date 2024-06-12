@@ -4,7 +4,7 @@ import './Slidebar.css'
 
 function Slidebar({ onAddNotes, notelist,onSelectNote }) {
   
-  const [selectedNoteGroup, setSelectedNoteGroup] = useState(null);
+  const [selectedNoteGroup, setSelectedNoteGroup] = useState("");
 
   const handelselectnote = (group) => {
 
