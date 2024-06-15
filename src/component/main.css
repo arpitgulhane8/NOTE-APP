@@ -8,6 +8,7 @@
     display: flex;
     width:100% ;
     margin-top: 0%;
+    box-sizing: border-box;
   }
   
   .blur {
@@ -28,17 +29,32 @@
     z-index: 1000;
   }
   
-  /*.popup {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    z-index: 1001;
-    /* Additional styles for the popup 
-  }*/
 
-  
-  
   .main_app{
     display: flex;
     width:100% ;
   }
+
+  @media (max-width: 550px) {
+    .notearea_home{
+        display: none;
+    }
+
+    .slidebar {
+        width: 100%;
+    }
+
+    .notearea {
+        display: none;
+    }
+
+    .screate_note {
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+
+    .sgroup_btn {
+        width: calc(100% - 40px);
+        margin: 10px 20px;
+    }
+}

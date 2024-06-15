@@ -1,15 +1,16 @@
 .slidebar{ 
     width: 30%;
     height:630px;
+    box-sizing: border-box;
 }
 
-.slidebar .pocket_note{
+.slidebar .spocket_note{
     font-size: 30px;
     font-weight: 700;
     margin: 20px;
 }
 
-.create_note{
+.screate_note{
     width: 300px;
     height: 50px;
     font-weight: 700;
@@ -20,21 +21,23 @@
     margin:20px 40px;
 }
 
-.group_btn{
+.sgroup_btn{
     display: flex;
     justify-content:flex-start;
     text-align: center;
     align-items: center;
-    width: 370px;
+    width: 360px;
     height: 60px;
     color:black;
-    border-radius:20px;
+    border-top-left-radius:25px;
+    border-bottom-left-radius:25px ;
     margin-left: 40px;
     padding: 5px;
     margin-top: 10px;
+    box-sizing: border-box;
 }
 
-.group_btn .initials{
+.sgroup_btn .sinitials{
     width: 60px;
     height: 60px;   
     border-radius: 50px;
@@ -47,7 +50,7 @@
     margin-left: 10px;
 }
     
-.group_name{
+.sgroup_name{
     font-size: 30px;
     font-weight: 700;
 }

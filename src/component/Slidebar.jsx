@@ -1,41 +1,48 @@
-import React,{useState} from "react";
-import './Slidebar.css'
+import React, { useState } from "react";
+import "./Slidebar.css";
 
+function Slidebar({ onAddNotes, notelist, onSelectNote }) {
 
-function Slidebar({ onAddNotes, notelist,onSelectNote }) {
-  
-  const [selectedNoteGroup, setSelectedNoteGroup] = useState("");
+  const [selectedNoteGroup, setSelectedNoteGroup] = useState("name:''");
 
   const handelselectnote = (group) => {
-
     setSelectedNoteGroup(group);
     onSelectNote(group);
-  }
+  };
 
   return (
-    <div className="slidebar" >
-      <p className="pocket_note">Pocket Notes</p>
+    <div className="slidebar">
+      <p className="spocket_note">Pocket Notes</p>
+
       <div>
-        <button
-        className="create_note"
-          onClick={onAddNotes}
-        >
-         + Create Notes groups
+        <button className="screate_note" onClick={onAddNotes}>
+          + Create Notes groups
         </button>
+
         {notelist.map((group, index) => (
-          <div className="group_btn"
+          <div
+            className="sgroup_btn"
             key={index}
             onClick={() => handelselectnote(group)}
             style={{
-              backgroundColor: selectedNoteGroup.name === group.name ? "#F7ECDC" : "",
+              backgroundColor:
+                selectedNoteGroup.name === group.name ? "#F7ECDC" : "",
             }}
           >
-            <div className="initials" style={{backgroundColor:group.color}}>{group.initials}</div><div className="group_name">{group.name}</div>
+   
+            <div className="sinitials" style={{ backgroundColor: group.color }}>
+              {group.initials}
+            </div>
+   
+            <div className="sgroup_name">{group.name}</div>
+          
           </div>
         ))}
+      
       </div>
     </div>
   );
 }
 
 export default Slidebar;
+

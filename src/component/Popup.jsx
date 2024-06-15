@@ -16,10 +16,14 @@ function Popup({ onSave, onClose }) {
 
   const getInitials = (name) => {
     const words = name.trim().split(" ");
-    const initials = words.slice(0, 2).map(word => word[0].toUpperCase()).join("");
+    const initials = words
+      .filter(word => word.length > 0) // Filter out empty words
+      .slice(0, 2)
+      .map(word => word[0].toUpperCase())
+      .join("");
     return initials;
   };
-
+  
   const saveGroup = () => {
     if (!name.trim()) return;
     const newGroup = {
@@ -37,20 +41,20 @@ function Popup({ onSave, onClose }) {
       className="popup"
     >
       <p className="popup_note">Create New Notes group</p>
-      <div className="group_name">
-       <label className="group_label">Group Name</label> 
+      <div className="pgroup_name">
+       <label className="pgroup_label">Group Name</label> 
         <input
+        className="pinput"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Enter your group name...."
-          style={{ borderRadius: "5px", width: "300px" }}
         />
       </div>
-      <div className="color_picker">
-        <label className="color_option">Color Option </label>
+      <div className="pcolor_picker">
+        <label className="pcolor_option">Color Option</label>
         {colors.map((colors, index) => (
-          <button className="color_btn"
+          <button className="pcolor_btn"
             key={index}
             value={colors}
             style={{
@@ -62,11 +66,7 @@ function Popup({ onSave, onClose }) {
       </div>
       <button
         onClick={saveGroup}
-        style={{
-          backgroundColor: "black",
-          color: "white",
-          marginLeft: "350px",
-        }}
+        className="pcreate"
       >
         Create
       </button>
