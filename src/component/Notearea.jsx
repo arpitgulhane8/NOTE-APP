@@ -1,5 +1,5 @@
 import React from "react";
-import "./notearea.css";
+import "./notearea1.css";
 import noteimg from "../assest/note_img.png"
 import lock from "../assest/lock.png"
 import vector from "../assest/Vector.png"
