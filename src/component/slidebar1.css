@@ -1,0 +1,63 @@
+.slidebar{
+    width: 30vw;
+    height: 100vh;
+}
+
+.spocket_note{
+  /* font-size: 35px;*/
+   font-size: calc(2em + 0.5vw);
+    font-weight: 700;
+    margin: 20px;
+}
+
+.screate_note{
+    width: 25vw;
+    height: 10vh;
+    font-weight: 700;
+   /* font-size: 25px;*/
+   font-size: calc(1em + 0.5vw);
+    background-color: black;
+    color: white;
+    border-radius:25px;
+    margin:20px 30px;
+    box-sizing: border-box;
+}
+
+.sgroup_btn{
+    width: 27vw;
+    height: 10vh;
+    display: flex;
+    justify-content:flex-start;
+    text-align: center;
+    align-items: center;
+    color:black;
+    border-top-left-radius:25px;
+    border-bottom-left-radius:25px ;
+    margin-left: 40px;
+    padding: 5px;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+
+.sinitials{
+    width: 60px;
+    height: 60px;   
+    border-radius: 50px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+.initialp{
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 10px;
+    color: white;
+
+}
+    
+.sgroup_name{
+    font-size: 30px;
+    font-weight: 700;
+}
