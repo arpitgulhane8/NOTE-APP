@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Slidebar from "./Slidebar.jsx";
 import Popup from "./Popup.jsx";
 import Notearea from "./Notearea.jsx";
-import "./main.css";
+import "./main2.css";
 
 function Home() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
