@@ -7,15 +7,15 @@ import vector from "../assest/Vector.png"
 
 function Notearea({ notename, newNote, setNewNote, saveNewText }) {
 
+ 
   if (!notename) {
      //Render only the image if notename is null
     return (
       <div className="notearea_home">
         <img src={noteimg} alt="note_img" className="note_img" />
-        <h1>Pocket Notes</h1>
-        
-        <p>Send and receive messages without keeping your phone online.
-         Use Pocket Notes on up to 4 linked devices and 1 mobile phone</p>
+        <p1>Pocket Notes</p1>
+        <p2>Send and receive messages without keeping your phone online.
+         Use Pocket Notes on up to 4 linked devices and 1 mobile phone</p2>
        
        <div className="encrypted"><img src={lock} alt="lockimg" className="lockimg"/><p>end-to-end encrypted</p></div>
       </div>
@@ -25,39 +25,42 @@ function Notearea({ notename, newNote, setNewNote, saveNewText }) {
   return (
     <div className="notearea">
       <header className="header">
-        <div
+        <p
           className="header_initial"
           style={{ backgroundColor: notename ? notename.color : "" }}
         >
           {notename ? notename.initials : ""}
-        </div>
+        </p>
 
         <div className="header_name">
           {notename ? notename.name : "Select a note group"}
         </div>
       </header>
 
+     
       <div className="note_display">
         {notename &&
           notename.notes.map((note, index) => (
-            <div
+            <div className="container"
               key={index}
-              style={{ display: "flex", justifyContent:"space_between",marginLeft:"10px" }}
             >
       
-              <p style={{ width: "30%" }}>
+              <div className="display_date">
                 {new Date(note.timestamp).toLocaleString()}
-              </p>
+        
+              </div>
 
-              <p style={{ width: "70%", boxSizing: "border-box" }}>
-                {note.Text}
-              </p>
+              <div className="ndisplay_text">
+              {note.Text}
+            
+              </div>
             </div>
           ))}
       </div>
+      
 
       <footer className="note_input">
-        <input
+        <textarea
           value={newNote}
           type="text"
           onChange={(e) => setNewNote(e.target.value)}
@@ -66,7 +69,8 @@ function Notearea({ notename, newNote, setNewNote, saveNewText }) {
         />
 
         <button className="add_btn" onClick={() => saveNewText(newNote)}>
-          <img  style={{width:"10px",height:"10px"}} src={vector} alt="vector"/></button>
+          <img  style={{width:"10px",height:"10px"}} src={vector} alt="vector"/>
+        </button>
       </footer>
     </div>
   );
