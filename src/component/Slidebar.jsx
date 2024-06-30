@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Slidebar.css";
+import "./slidebar1.css";
 
 function Slidebar({ onAddNotes, notelist, onSelectNote }) {
 
