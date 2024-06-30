@@ -42,7 +42,6 @@ function Home() {
       
       <div className={`appLyout ${isPopupOpen ? "blur" : ""}`}>
         <Slidebar
-          className="Slidebar"
           onAddNotes={() => setIsPopupOpen(true)}
           onSelectNote={handelselectnote}
           notelist={popupdata}
@@ -67,5 +66,3 @@ function Home() {
 }
 
 export default Home;
-
-
