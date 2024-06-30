@@ -18,7 +18,7 @@ function Slidebar({ onAddNotes, notelist, onSelectNote }) {
         <button className="screate_note" onClick={onAddNotes}>
           + Create Notes groups
         </button>
-
+        <div style={{overflowY:"auto",height:"68vh"}}>
         {notelist.map((group, index) => (
           <div
             className="sgroup_btn"
@@ -31,14 +31,14 @@ function Slidebar({ onAddNotes, notelist, onSelectNote }) {
           >
    
             <div className="sinitials" style={{ backgroundColor: group.color }}>
-              {group.initials}
+              <p className="initialp">{group.initials}</p>
             </div>
    
             <div className="sgroup_name">{group.name}</div>
           
           </div>
         ))}
-      
+   </div>   
       </div>
     </div>
   );
